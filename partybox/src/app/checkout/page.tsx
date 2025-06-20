@@ -19,14 +19,14 @@ const cartItems = [
     nombre: "Kit Cumpleaños Infantil Superhéroes",
     precio: 120,
     cantidad: 1,
-    imagen: "/placeholder.svg?height=100&width=100",
+    imagen: "https://m.media-amazon.com/images/I/81o7auSNyrL.jpg?height=100&width=100",
   },
   {
     id: 2,
     nombre: "Kit Baby Shower Niña",
     precio: 150,
     cantidad: 1,
-    imagen: "/placeholder.svg?height=100&width=100",
+    imagen: "https://m.media-amazon.com/images/I/81oewFD3uML.jpg?height=100&width=100",
   },
 ]
 

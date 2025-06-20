@@ -486,40 +486,6 @@ export default function PersonalizarPage() {
                             <p className="text-gray-500">No has seleccionado elementos</p>
                           )}
                         </div>
-
-                        <div>
-                          <h3 className="font-medium mb-2">Información de entrega</h3>
-                          <div className="space-y-4">
-                            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                              <div>
-                                <Label htmlFor="nombre">Nombre completo</Label>
-                                <Input id="nombre" placeholder="Tu nombre completo" />
-                              </div>
-                              <div>
-                                <Label htmlFor="telefono">Teléfono</Label>
-                                <Input id="telefono" placeholder="Tu número de teléfono" />
-                              </div>
-                            </div>
-                            <div>
-                              <Label htmlFor="direccion">Dirección de entrega</Label>
-                              <Input id="direccion" placeholder="Tu dirección completa" />
-                            </div>
-                            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-                              <div>
-                                <Label htmlFor="ciudad">Ciudad</Label>
-                                <Input id="ciudad" placeholder="Ciudad" />
-                              </div>
-                              <div>
-                                <Label htmlFor="distrito">Distrito</Label>
-                                <Input id="distrito" placeholder="Distrito" />
-                              </div>
-                              <div>
-                                <Label htmlFor="codigo-postal">Código postal</Label>
-                                <Input id="codigo-postal" placeholder="Código postal" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                       </CardContent>
                     </Card>
                   </div>
@@ -544,20 +510,6 @@ export default function PersonalizarPage() {
                           <span>S/. {(calcularTotal() + 15).toFixed(2)}</span>
                         </div>
 
-                        <div className="pt-4">
-                          <Label htmlFor="metodo-pago">Método de pago</Label>
-                          <Select defaultValue="tarjeta">
-                            <SelectTrigger>
-                              <SelectValue placeholder="Selecciona un método de pago" />
-                            </SelectTrigger>
-                            <SelectContent>
-                              <SelectItem value="tarjeta">Tarjeta de crédito/débito</SelectItem>
-                              <SelectItem value="yape">Yape</SelectItem>
-                              <SelectItem value="plin">Plin</SelectItem>
-                              <SelectItem value="transferencia">Transferencia bancaria</SelectItem>
-                            </SelectContent>
-                          </Select>
-                        </div>
                       </CardContent>
                       <CardFooter>
                         <Button
