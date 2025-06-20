@@ -23,7 +23,7 @@ export default function Home() {
             <Link href="/decorador-virtual" className="text-sm font-medium hover:text-pink-500 transition-colors">
               Decorador Virtual
             </Link>
-            <Link href="#" className="text-sm font-medium hover:text-pink-500 transition-colors">
+            <Link href="/contacto" className="text-sm font-medium hover:text-pink-500 transition-colors">
               Contacto
             </Link>
           </nav>
@@ -133,7 +133,7 @@ export default function Home() {
               </div>
               <div className="relative">
                 <img
-                  src="/images/homepage-hero.png"
+                  src="https://i.ibb.co/qMk7zC6j/Landing-Page-Home.jpg"
                   alt="Vista general de PartyBox"
                   className="w-full rounded-lg shadow-xl border"
                 />
@@ -146,7 +146,7 @@ export default function Home() {
             <div className="grid gap-8 lg:grid-cols-2 items-center">
               <div className="relative order-2 lg:order-1">
                 <img
-                  src="/images/catalog-page.png"
+                  src="https://i.ibb.co/qFy1YNs5/Catalago-1.jpg"
                   alt="Catálogo de kits PartyBox"
                   className="w-full rounded-lg shadow-xl border"
                 />
@@ -211,7 +211,7 @@ export default function Home() {
               </div>
               <div className="relative">
                 <img
-                  src="/images/personalize-step1.png"
+                  src="https://i.ibb.co/4wGD8zcx/Personalizacion-Paso-1-1.jpg"
                   alt="Selección de temática en PartyBox"
                   className="w-full rounded-lg shadow-xl border"
                 />
@@ -224,7 +224,7 @@ export default function Home() {
             <div className="grid gap-8 lg:grid-cols-2 items-center">
               <div className="relative order-2 lg:order-1">
                 <img
-                  src="/images/personalize-colors.png"
+                  src="https://i.ibb.co/TMLXwD0s/Personalizacion-Paso-2-1-1.jpg"
                   alt="Selección de colores en PartyBox"
                   className="w-full rounded-lg shadow-xl border"
                 />
@@ -289,7 +289,7 @@ export default function Home() {
               </div>
               <div className="relative">
                 <img
-                  src="/images/personalize-elements.png"
+                  src="https://i.ibb.co/xpLc3Sb/Personalizacion-Paso-2-2-1.jpg"
                   alt="Selección de elementos en PartyBox"
                   className="w-full rounded-lg shadow-xl border"
                 />

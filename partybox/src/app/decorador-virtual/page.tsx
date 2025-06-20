@@ -5,7 +5,6 @@ import type React from "react"
 import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
 import { Package, Upload, RotateCcw, Save, Download, Palette, Move, Trash2, ShoppingCart } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -95,7 +94,7 @@ export default function DecoradorVirtualPage() {
   const [elementoSeleccionado, setElementoSeleccionado] = useState<string | null>(null)
   const [isDragging, setIsDragging] = useState(false)
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 })
-  const [escalaCanvas, setEscalaCanvas] = useState(1)
+  const [escalaCanvas, setEscalaCanvas] = useState(1) 
 
   // Cargar imagen de fondo
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {

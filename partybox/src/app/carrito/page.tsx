@@ -4,7 +4,6 @@ import { useState } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { Minus, Package, Plus, Trash2, MapPin, CreditCard, ArrowRight, Check } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -17,7 +16,7 @@ const initialCartItems = [
     nombre: "Kit Cumpleaños Infantil Superhéroes",
     precio: 120,
     cantidad: 1,
-    imagen: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=100&h=100&fit=crop&crop=center",
+    imagen: "https://m.media-amazon.com/images/I/81o7auSNyrL.jpg",
     personalizaciones: ["Colores: Azul, Rojo", "Globos extra", "Guirnaldas temáticas"],
   },
   {
@@ -25,7 +24,7 @@ const initialCartItems = [
     nombre: "Kit Baby Shower Niña",
     precio: 150,
     cantidad: 1,
-    imagen: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=100&h=100&fit=crop&crop=center",
+    imagen: "https://m.media-amazon.com/images/I/81oewFD3uML.jpg",
     personalizaciones: ["Colores: Rosa, Dorado", "Figuras colgantes", "Manteles decorativos"],
   },
 ]
@@ -40,7 +39,7 @@ const container = {
   },
 }
 
-const item = {
+const itemAnimation  = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0 },
 }
@@ -146,7 +145,7 @@ export default function CarritoPage() {
                       {cartItems.map((item) => (
                         <motion.div
                           key={item.id}
-                          variants={item}
+                          variants={itemAnimation}
                           exit={{ opacity: 0, x: -100 }}
                           layout
                           className="flex items-start gap-4 p-4 border rounded-lg hover:border-pink-200 transition-colors"

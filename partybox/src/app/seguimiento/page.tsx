@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { Package, Clock, CheckCircle, Truck, Home, Star, Phone, MessageCircle, Send } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
@@ -54,7 +53,7 @@ const fadeIn = {
 }
 
 export default function SeguimientoPage() {
-  const [numeroPedido, setNumeroPedido] = useState("PB-2024-001")
+  //const [numeroPedido, setNumeroPedido] = useState("PB-2024-001")
   const [pedido, setPedido] = useState(pedidoEjemplo)
   const [progreso, setProgreso] = useState(75)
   const [showChat, setShowChat] = useState(false)

@@ -3,7 +3,6 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Filter, Package, Search, ShoppingCart, Plus } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -18,7 +17,7 @@ const kits = [
     nombre: "Kit Cumpleaños Infantil",
     descripcion: "Kit completo para fiesta infantil con temática de superhéroes",
     precio: 120,
-    imagen: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=300&h=300&fit=crop&crop=center",
+    imagen: "https://www.showchiquitines.com/wp-content/gallery/deco/d_06.jpg",
     categoria: "Cumpleaños",
     incluye: ["20 globos", "Guirnaldas", "Platos y vasos", "Servilletas", "Manteles"],
   },
@@ -27,7 +26,7 @@ const kits = [
     nombre: "Kit Baby Shower Niña",
     descripcion: "Decoración completa para baby shower en tonos rosados",
     precio: 150,
-    imagen: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=300&fit=crop&crop=center",
+    imagen: "https://oechsle.vteximg.com.br/arquivos/ids/18564580-1000-1000/image-bd7cdaa341f045e89afda450bbc8f205.jpg?v=638603814010000000://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=300&fit=crop&crop=center",
     categoria: "Baby Shower",
     incluye: ["30 globos", "Banner", "Figuras colgantes", "Vajilla", "Decoración mesa"],
   },
@@ -36,7 +35,7 @@ const kits = [
     nombre: "Kit Aniversario Romántico",
     descripcion: "Decoración elegante para celebrar tu aniversario",
     precio: 180,
-    imagen: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=300&h=300&fit=crop&crop=center",
+    imagen: "https://felizcumpleaños.co/cdn/shop/products/Screenshot_20210227-071402_Instagram.jpg?v=1619559064",
     categoria: "Aniversario",
     incluye: ["Globos dorados", "Velas", "Pétalos", "Copas", "Manteles elegantes"],
   },
@@ -45,7 +44,7 @@ const kits = [
     nombre: "Kit Despedida de Soltera",
     descripcion: "Todo lo necesario para una despedida de soltera inolvidable",
     precio: 200,
-    imagen: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=300&h=300&fit=crop&crop=center",
+    imagen: "https://static.wixstatic.com/media/97c721_6aa6ce3508304ba58a5b9c1e2ae1bda2~mv2.jpg/v1/fill/w_520,h_520,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/97c721_6aa6ce3508304ba58a5b9c1e2ae1bda2~mv2.jpg",
     categoria: "Despedida",
     incluye: ["Globos temáticos", "Accesorios", "Decoración", "Vajilla", "Juegos"],
   },
@@ -54,7 +53,7 @@ const kits = [
     nombre: "Kit Graduación",
     descripcion: "Celebra tu logro académico con estilo",
     precio: 160,
-    imagen: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=300&h=300&fit=crop&crop=center",
+    imagen: "https://sublicielo.com/wp-content/uploads/2021/12/Kit-Panel-Redondo-3-Forros-de-Cilindros-Graduacion-Ninos-Fondo-Negro-Elegante.jpg",
     categoria: "Graduación",
     incluye: ["Globos académicos", "Banner graduación", "Decoración mesa", "Confeti", "Marcos fotos"],
   },
@@ -63,7 +62,7 @@ const kits = [
     nombre: "Kit Fiesta Tropical",
     descripcion: "Ambiente tropical para fiestas de verano",
     precio: 140,
-    imagen: "https://images.unsplash.com/photo-1544531586-fbd96ceaff1e?w=300&h=300&fit=crop&crop=center",
+    imagen: "https://m.media-amazon.com/images/I/51F2wLHiLXL._AC_.jpg",
     categoria: "Temáticos",
     incluye: ["Decoración tropical", "Globos coloridos", "Guirnaldas", "Vajilla temática", "Accesorios"],
   },
@@ -76,7 +75,7 @@ const productos = [
     nombre: "Globos Látex Colores Surtidos",
     descripcion: "Pack de 30 globos de látex en colores variados",
     precio: 15,
-    imagen: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=200&h=200&fit=crop&crop=center",
+    imagen: "https://globosyuli.com/9951/globo-color-surtido-n7.jpg",
     categoria: "Globos",
     stock: 50,
   },
@@ -85,7 +84,7 @@ const productos = [
     nombre: "Guirnalda Feliz Cumpleaños",
     descripcion: "Guirnalda decorativa de papel con mensaje personalizable",
     precio: 25,
-    imagen: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=200&h=200&fit=crop&crop=center",
+    imagen: "https://m.media-amazon.com/images/I/71yXB-dZ8ML.jpg",
     categoria: "Decoración",
     stock: 30,
   },
@@ -94,7 +93,7 @@ const productos = [
     nombre: "Platos Desechables Dorados",
     descripcion: "Set de 20 platos desechables color dorado",
     precio: 18,
-    imagen: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop&crop=center",
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnXiaLamHn74VDIXi9pH3mg-M3QMy-bdiUgg&s",
     categoria: "Vajilla",
     stock: 25,
   },
@@ -103,7 +102,7 @@ const productos = [
     nombre: "Velas Numéricas",
     descripcion: "Velas con números del 0 al 9 disponibles",
     precio: 8,
-    imagen: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop&crop=center",
+    imagen: "https://www.ango.com.pe/wp-content/uploads/2020/10/AN190622182a.jpg",
     categoria: "Velas",
     stock: 100,
   },
@@ -112,7 +111,7 @@ const productos = [
     nombre: "Confeti Metálico",
     descripcion: "Confeti metálico en colores dorado y plateado",
     precio: 12,
-    imagen: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=200&h=200&fit=crop&crop=center",
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqBLlOFSh9vO1Q1bj-dIOQmMRMTkcPyndy5w&s",
     categoria: "Decoración",
     stock: 40,
   },
@@ -121,7 +120,7 @@ const productos = [
     nombre: "Globos Metálicos Números",
     descripcion: "Globos metálicos con números, disponibles del 0-9",
     precio: 22,
-    imagen: "https://images.unsplash.com/photo-1606041008023-472dfb5e530f?w=200&h=200&fit=crop&crop=center",
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfRazQwIdTaa5T3lsg5FaD1bSg_QcSgNOI1Q&s",
     categoria: "Globos",
     stock: 35,
   },
@@ -130,7 +129,7 @@ const productos = [
     nombre: "Servilletas Temáticas",
     descripcion: "Pack de 40 servilletas con diseños temáticos",
     precio: 10,
-    imagen: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop&crop=center",
+    imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNgd75Oahr1WeAZOaz9TGC0F1nOdyIdoq_-A&s",
     categoria: "Vajilla",
     stock: 60,
   },
@@ -139,7 +138,7 @@ const productos = [
     nombre: "Cortina Metálica Decorativa",
     descripcion: "Cortina metálica para fondo de fotos",
     precio: 35,
-    imagen: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=200&h=200&fit=crop&crop=center",
+    imagen: "https://http2.mlstatic.com/D_NQ_NP_672265-MPE46453572760_062021-O-cortinas-metalicas-para-armar-tu-fiesta-tematica.webp",
     categoria: "Decoración",
     stock: 20,
   },
@@ -148,7 +147,7 @@ const productos = [
     nombre: "Vasos de Papel Coloridos",
     descripcion: "Set de 25 vasos de papel en colores vibrantes",
     precio: 12,
-    imagen: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop&crop=center",
+    imagen: "https://m.media-amazon.com/images/I/61Y8R17H6kL.jpg",
     categoria: "Vajilla",
     stock: 45,
   },
@@ -157,7 +156,7 @@ const productos = [
     nombre: "Globos de Helio Corazón",
     descripcion: "Globos en forma de corazón con helio incluido",
     precio: 28,
-    imagen: "https://images.unsplash.com/photo-1606041008023-472dfb5e530f?w=200&h=200&fit=crop&crop=center",
+    imagen: "https://ponchycaprico.com/cdn/shop/files/CORMIX_12_globos_de_corazones_mix_con_helio.png?v=1738112410",
     categoria: "Globos",
     stock: 20,
   },
@@ -166,7 +165,7 @@ const productos = [
     nombre: "Manteles Desechables",
     descripcion: "Manteles de papel resistente en varios colores",
     precio: 16,
-    imagen: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop&crop=center",
+    imagen: "https://i5.walmartimages.com/asr/d8a739be-1e7b-4bee-920d-5aa022045fad.3d6aa066f346ba21c46970b91554c92e.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
     categoria: "Vajilla",
     stock: 30,
   },
@@ -175,7 +174,7 @@ const productos = [
     nombre: "Velas de Cumpleaños Especiales",
     descripcion: "Velas decorativas con formas divertidas",
     precio: 14,
-    imagen: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop&crop=center",
+    imagen: "https://images.unsplash.com/photo-1607482369189-a53b6e71fa48?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmVsYXMlMjBkZSUyMGN1bXBsZWElQzMlQjFvc3xlbnwwfHwwfHx8MA%3D%3D",
     categoria: "Velas",
     stock: 55,
   },
@@ -187,7 +186,7 @@ const categoriasKits = ["Todos", "Cumpleaños", "Baby Shower", "Aniversario", "D
 export default function CatalogoPage() {
   const [tabActiva, setTabActiva] = useState("kits")
 
-  const agregarAlCarrito = (item: any, tipo: "kit" | "producto") => {
+  const agregarAlCarrito = (item: unknown, tipo: "kit" | "producto") => {
     // Aquí iría la lógica para agregar al carrito
     console.log(`Agregando ${tipo}:`, item)
     // Podrías mostrar una notificación de éxito aquí
@@ -248,25 +247,39 @@ export default function CatalogoPage() {
 
           {/* Tabs para Kits vs Productos */}
           <Tabs value={tabActiva} onValueChange={setTabActiva} className="mb-8">
-            <TabsList className="grid w-full grid-cols-2 max-w-md">
-              <TabsTrigger value="kits">Kits Completos</TabsTrigger>
-              <TabsTrigger value="productos">Productos Individuales</TabsTrigger>
+            <TabsList className="w-full max-w-md mb-6 bg-gray-100 p-1 rounded-lg">
+              <TabsTrigger 
+                value="kits" 
+                className="flex-1 py-2.5 data-[state=active]:bg-pink-500 data-[state=active]:text-black data-[state=active]:shadow-md font-medium transition-all"
+              >
+                Kits Completos
+              </TabsTrigger>
+              <TabsTrigger 
+                value="productos" 
+                className="flex-1 py-2.5 data-[state=active]:bg-pink-500 data-[state=active]:text-black data-[state=active]:shadow-md font-medium transition-all"
+              >
+                Productos Individuales
+              </TabsTrigger>
             </TabsList>
 
             {/* Tab de Kits Completos */}
             <TabsContent value="kits" className="space-y-6">
-              {/* Filtros y búsqueda para kits */}
-              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+              {/* Filtros y búsqueda para kits - MEJORADO */}
+              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between bg-gray-50 p-4 rounded-lg">
                 <div className="flex flex-col gap-4 md:flex-row md:items-center">
                   <div className="relative w-full md:w-64">
-                    <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-500" />
-                    <Input type="search" placeholder="Buscar kits..." className="pl-8" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-500" />
+                    <Input 
+                      type="search" 
+                      placeholder="Buscar kits..." 
+                      className="pl-10 border-gray-200 bg-white"
+                    />
                   </div>
                   <div className="flex items-center gap-2">
                     <Filter className="h-4 w-4 text-gray-500" />
                     <span className="text-sm font-medium">Filtrar por:</span>
                     <Select defaultValue="todos">
-                      <SelectTrigger className="w-40">
+                      <SelectTrigger className="w-40 bg-white border-gray-200">
                         <SelectValue placeholder="Categoría" />
                       </SelectTrigger>
                       <SelectContent>
@@ -282,7 +295,7 @@ export default function CatalogoPage() {
                 <div className="flex items-center gap-2">
                   <span className="text-sm font-medium">Ordenar por:</span>
                   <Select defaultValue="relevancia">
-                    <SelectTrigger className="w-40">
+                    <SelectTrigger className="w-40 bg-white border-gray-200">
                       <SelectValue placeholder="Ordenar por" />
                     </SelectTrigger>
                     <SelectContent>
@@ -298,7 +311,7 @@ export default function CatalogoPage() {
               {/* Grid de Kits */}
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {kits.map((kit) => (
-                  <Card key={kit.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                  <Card key={kit.id} className="overflow-hidden hover:shadow-lg transition-shadow border-gray-200">
                     <div className="aspect-square bg-gray-100">
                       <img
                         src={kit.imagen || "/placeholder.svg"}
@@ -361,12 +374,16 @@ export default function CatalogoPage() {
 
             {/* Tab de Productos Individuales */}
             <TabsContent value="productos" className="space-y-6">
-              {/* Filtros y búsqueda para productos */}
-              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+              {/* Filtros y búsqueda para productos - MEJORADO */}
+              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between bg-gray-50 p-4 rounded-lg">
                 <div className="flex flex-col gap-4 md:flex-row md:items-center">
                   <div className="relative w-full md:w-64">
-                    <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-500" />
-                    <Input type="search" placeholder="Buscar productos..." className="pl-8" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-500" />
+                    <Input 
+                      type="search" 
+                      placeholder="Buscar productos..." 
+                      className="pl-10 border-gray-200 bg-white"
+                    />
                   </div>
                   <div className="flex items-center gap-2">
                     <Filter className="h-4 w-4 text-gray-500" />
